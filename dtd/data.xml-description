@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE db [ <!-- db definition -->
+    <!ELEMENT db (users | empty-tag)> <!-- db has users and empty-tag elements -->
+    <!ELEMENT users (user)*> <!-- users can have 0 or more user elements -->
+    <!--<!ELEMENT users (user+)>--> <!-- must has one or more -->
+    <!ELEMENT user (name, trololo?, robot?, age)> <!-- user required name followed by optional trololo, followed by optional robot, followed by age -->
+    <!ATTLIST user id CDATA #REQUIRED <!-- attributes list: id required, -->
+                   fake CDATA #IMPLIED> <!-- fake is optional -->
+    <!ELEMENT name (#PCDATA)> <!-- name tag contains string value -->
+    <!ELEMENT age (#PCDATA)>
+    <!ELEMENT trololo (#PCDATA)>
+    <!ELEMENT robot (#PCDATA)>
+    <!ELEMENT empty-tag (#PCDATA)>
+]>
+<db>
+  <users>
+    <user id="-1" fake="true">
+      <name>Ololo</name>
+      <trololo>O.o</trololo>
+      <robot>true</robot>
+      <age>0</age>
+    </user>
+    <user id="1">
+      <name>Maksimko</name>
+      <age>35</age>
+    </user>
+  </users>
+</db>

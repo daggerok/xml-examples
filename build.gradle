@@ -1,0 +1,11 @@
+apply plugin: "base"
+
+task dtd(type: Exec) {
+  executable "bash"
+  args "-c", """
+             whereis xmllint;
+             which xmllint;
+             echo "";
+             \$(which xmllint) --valid $projectDir/dtd/data.xml
+             """
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE db [
+  <!ELEMENT db (users | empty-tag)>
+  <!ELEMENT users (user)*>
+  <!ELEMENT user (name, trololo?, robot?, age)>
+  <!ATTLIST user id CDATA #REQUIRED
+      fake CDATA #IMPLIED>
+  <!ELEMENT name (#PCDATA)>
+  <!ELEMENT age (#PCDATA)>
+  <!ELEMENT trololo (#PCDATA)>
+  <!ELEMENT robot (#PCDATA)>
+  <!ELEMENT empty-tag (#PCDATA)>
+]>
+<db>
+  <users>
+    <user id="-1" fake="true">
+      <name>Ololo</name>
+      <trololo>O.o</trololo>
+      <robot>true</robot>
+      <age>0</age>
+    </user>
+    <user id="1">
+      <name>Maksimko</name>
+      <age>35</age>
+    </user>
+  </users>
+</db>
